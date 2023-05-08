@@ -3,31 +3,31 @@ import "./newUser.css";
 export default function NewUser() {
   return (
     <div className="newUser">
-      <h1 className="newUserTitle">New User</h1>
+      <h1 className="newUserTitle">Add Client</h1>
       <form className="newUserForm">
         <div className="newUserItem">
           <label>Username</label>
-          <input type="text" placeholder="john" />
+          <input type="text" placeholder="Please Input Username" />
         </div>
         <div className="newUserItem">
           <label>Full Name</label>
-          <input type="text" placeholder="John Smith" />
+          <input type="text" placeholder="Please Input Full Name" />
         </div>
         <div className="newUserItem">
           <label>Email</label>
-          <input type="email" placeholder="john@gmail.com" />
+          <input type="email" placeholder="Please Input Your Email" />
         </div>
         <div className="newUserItem">
           <label>Password</label>
-          <input type="password" placeholder="password" />
+          <input type="password" placeholder="Please Input Password" />
         </div>
         <div className="newUserItem">
           <label>Phone</label>
-          <input type="text" placeholder="+1 123 456 78" />
+          <input type="text" placeholder="Please Input Phone Numbers" />
         </div>
         <div className="newUserItem">
           <label>Address</label>
-          <input type="text" placeholder="New York | USA" />
+          <input type="text" placeholder="Please Input City" />
         </div>
         <div className="newUserItem">
           <label>Gender</label>
@@ -47,7 +47,7 @@ export default function NewUser() {
             <option value="no">No</option>
           </select>
         </div>
-        <button className="newUserButton">Create</button>
+        <button className="newUserButton">Create New Client</button>
       </form>
     </div>
   );

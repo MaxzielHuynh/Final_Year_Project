@@ -7,7 +7,7 @@ import { Publish } from "@material-ui/icons";
 export default function Product() {
   return (
     <div className="product">
-      <div className="productTitleContainer">
+      <div className="productTitleHolder">
         <h1 className="productTitle">Product</h1>
         <Link to="/newproduct">
           <button className="productAddButton">Create</button>

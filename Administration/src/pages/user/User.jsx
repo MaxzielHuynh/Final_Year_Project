@@ -12,13 +12,13 @@ import "./user.css";
 export default function User() {
   return (
     <div className="user">
-      <div className="userTitleContainer">
+      <div className="userTitleHolder">
         <h1 className="userTitle">Edit User</h1>
         <Link to="/newUser">
           <button className="userAddButton">Create</button>
         </Link>
       </div>
-      <div className="userContainer">
+      <div className="userHolder">
         <div className="userShow">
           <div className="userShowTop">
             <img

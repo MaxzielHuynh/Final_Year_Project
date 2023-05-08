@@ -3,7 +3,7 @@
   padding: 20px;
 }
 
-.userTitleContainer {
+.userTitleHolder {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,7 +20,7 @@
   font-size: 16px;
 }
 
-.userContainer {
+.userHolder {
   display: flex;
   margin-top: 20px;
 }
