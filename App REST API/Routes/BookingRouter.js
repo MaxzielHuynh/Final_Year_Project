@@ -66,18 +66,26 @@ router.get("/", validateAdminToken, async (req, res) => {
 
 //get cash 1 months
 
-router.get("/revenue", validateAdminToken, async (req, res) => {
+router.get("/income", validateAdminToken, async (req, res) => {
+  const productID = res.query.productID;
   const date = new Date();
   const previousMonth = new Date(date.setMonth(date.getMonth() - 1));
   const anotherMonths = new Date(
     new Date().setMonth(previousMonth.getMonth() - 1)
   );
   try {
-    const revenue = await Booking.aggregate([
+    const income = await Booking.aggregate([
       {
         $match: {
           createdAt: {
             $gte: anotherMonths,
+            ...(productID && {
+              wares: {
+                $elemMatch: {
+                  productID,
+                },
+              },
+            }),
           },
         },
       },
@@ -94,7 +102,7 @@ router.get("/revenue", validateAdminToken, async (req, res) => {
         },
       },
     ]);
-    res.status(200).json(revenue  );
+    res.status(200).json(income);
   } catch (err) {
     res.status(500).json(err);
   }
