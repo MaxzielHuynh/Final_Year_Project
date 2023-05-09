@@ -1,6 +1,5 @@
 //client=user
 const mongoose = require("mongoose");
-
 const clientSchema = new mongoose.Schema(
   {
     username: {
@@ -25,7 +24,7 @@ const clientSchema = new mongoose.Schema(
     },
     img: {
       type: String,
-    }
+    },
   },
   { timestamps: true }
 );

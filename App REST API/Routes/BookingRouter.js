@@ -67,7 +67,6 @@ router.get("/", validateAdminToken, async (req, res) => {
 //get cash 1 months
 
 router.get("/income", validateAdminToken, async (req, res) => {
-  const productID = res.query.productID;
   const date = new Date();
   const previousMonth = new Date(date.setMonth(date.getMonth() - 1));
   const anotherMonths = new Date(
@@ -79,13 +78,6 @@ router.get("/income", validateAdminToken, async (req, res) => {
         $match: {
           createdAt: {
             $gte: anotherMonths,
-            ...(productID && {
-              wares: {
-                $elemMatch: {
-                  productID,
-                },
-              },
-            }),
           },
         },
       },

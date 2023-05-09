@@ -1,6 +1,5 @@
 //ware = product
 const mongoose = require("mongoose");
-
 const wareSchema = new mongoose.Schema(
   {
     title: {
@@ -8,21 +7,19 @@ const wareSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
-    //depiction=description
     depiction: {
       type: String,
       required: true,
-    },
+    }, //depiction=description
     img: {
       type: String,
       required: true,
     },
-    //group=category
     groups: {
       type: Array,
-    },
+    }, //group=category
     kindOf: {
-      type:Array,
+      type: Array,
     },
     size: {
       type: Array,
@@ -34,8 +31,6 @@ const wareSchema = new mongoose.Schema(
     forSales: {
       type: Boolean,
       default: true,
-    },
-  },
-  { timestamps: true }
+    },},{ timestamps: true }
 );
 module.exports = mongoose.model("WareModel", wareSchema);
